@@ -16,9 +16,9 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: "Noto Sans"
-      body: "Noto Sans"
-      code: "JetBrains Mono"
+      header: Noto Sans
+      body: Noto Sans
+      code: JetBrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
@@ -77,7 +77,6 @@ plugins:
   - source: github:quartz-community/github-flavored-markdown
     enabled: true
     order: 40
-  # 1. Версия для ПК (справа)
   - source: github:quartz-community/table-of-contents
     enabled: true
     order: 50
@@ -87,22 +86,19 @@ plugins:
     layout:
       position: right
       priority: 30
-      display: desktop-only # Показывать только на ПК [2]
-
-  # 2. Версия для мобильных устройств (перед текстом)
-  - source: 
+      display: desktop-only
+  - source:
       repo: github:quartz-community/table-of-contents
-      name: table-of-contents-mobile # Уникальное имя для второй копии [5]
+      name: table-of-contents-mobile
     enabled: true
     order: 51
     options:
       maxDepth: 6
       layout: modern
     layout:
-      position: beforeBody # Позиция перед телом статьи [4]
+      position: beforeBody
       priority: 10
-      display: mobile-only # Показывать только на мобильных [2]
-    
+      display: mobile-only
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -134,21 +130,29 @@ plugins:
       fontOrigin: googleFonts
       useThemeFonts: false
       body:
-        name: "Noto Sans"
-        weights: [400, 600, 700]
+        name: Noto Sans
+        weights:
+          - 400
+          - 600
+          - 700
         includeItalic: true
       header:
-        name: "Noto Sans"
-        weights: [600, 700]
+        name: Noto Sans
+        weights:
+          - 600
+          - 700
       title:
-        name: "Noto Sans"
-        weights: [700]
+        name: Noto Sans
+        weights:
+          - 700
       interface:
-        name: "Noto Sans"
-        weights: [400]
+        name: Noto Sans
+        weights:
+          - 400
       code:
-        name: "JetBrains Mono"
-        weights: [400]
+        name: JetBrains Mono
+        weights:
+          - 400
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
@@ -195,8 +199,8 @@ plugins:
     enabled: true
     options:
       title: Навигация
-      folderClickBehavior: collapse # "link" to navigate or "collapse" to toggle
-      folderDefaultState: collapsed # "collapsed" or "open"
+      folderClickBehavior: collapse
+      folderDefaultState: collapsed
       useSavedState: true
     layout:
       position: left
@@ -316,6 +320,10 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source: github:DreamCutter28/quartz-image-zoom
+    enabled: true
+    options: {}
+    order: 35
 layout:
   groups:
     toolbar:
