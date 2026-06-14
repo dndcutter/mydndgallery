@@ -1,56 +1,15 @@
-/* временно - запрещаем плавный скроллинг, который ломает навигацию */
-html,
-body,
-article {
-    scroll-behavior: auto !important;
+/* В самый верх вашего пользовательского CSS */
+html {
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 2rem; /* Чтобы заголовки не залезали под верхний тулбар при прыжке */
 }
 
-/* Исправление верстки списка папок */
-.page-listing {
-    .section-ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .section-li {
-        margin-bottom: 1rem;
-
-        .section {
-            display: flex;
-            align-items: center;
-            /* Центрирует элементы по вертикали */
-            gap: 1rem;
-            /* Отступ между датой, названием и тегами */
-
-            .meta {
-                margin: 0;
-                white-space: nowrap;
-                /* Чтобы дата не переносилась */
-                font-size: 0.9rem;
-                opacity: 0.7;
-            }
-
-            .desc {
-                flex: 1;
-
-                /* Название занимает всё свободное место */
-                h3 {
-                    margin: 0;
-                }
-            }
-
-            .tags {
-                display: flex;
-                gap: 0.5rem;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
+/* Проверяем, чтобы правая колонка, где сидит TOC, не перехватывала фокус скролла */
+.desktop-only.right {
+    position: sticky;
+    top: 2rem;
+    height: max-content;
 }
-
-
 
 // Фикс скрытия TOC при сворачивании (тема ломала min-height и collapse)
 div.toc {
@@ -114,39 +73,30 @@ ul.toc-content a {
 
 // Исправляем блеклый текст
 body p,
-body ul>li,
-body ol>li {
+body ul > li,
+body ol > li {
     color: var(--text-normal) !important;
 }
 
 // Изменяем жирный и курсив
-strong,
-b {
+strong, b {
     font-weight: 700 !important;
 }
 
 :root[saved-theme="dark"] {
-
-    strong,
-    b {
+    strong, b {
         color: rgb(243, 139, 168); // Catppuccin Mocha Red
     }
-
-    em,
-    i {
+    em, i {
         color: rgb(166, 227, 161); // Catppuccin Mocha Green
     }
 }
 
 :root[saved-theme="light"] {
-
-    strong,
-    b {
-        color: rgb(210, 15, 57); // Catppuccin Latte Red
+    strong, b {
+        color: rgb(210, 15, 57);  // Catppuccin Latte Red
     }
-
-    em,
-    i {
-        color: rgb(64, 160, 43); // Catppuccin Latte Green
+    em, i {
+        color: rgb(64, 160, 43);  // Catppuccin Latte Green
     }
 }
