@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: dndcutter.github.io
+  baseUrl: dndcutter.github.io/mydndgallery
   ignorePatterns:
     - private
     - templates
