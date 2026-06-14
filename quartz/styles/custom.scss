@@ -151,3 +151,23 @@ b {
     }
 }
 
+/* Sourced from lithou
+https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css
+(Modified to support newer Obsidian wrapper behavior) */
+
+table {
+    width: auto;
+    display: table;
+}
+
+.grid span.image-embed[alt*="."],
+span[alt*="grid"] {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3px;
+}
+
+img[alt*="grid"],
+.grid img[alt*="."] {
+    max-height: 30vh;
+}
