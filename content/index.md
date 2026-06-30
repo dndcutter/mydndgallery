@@ -20,5 +20,3 @@ title: Icewind Dale Homepage
   </p>
 
 </div>
-
-[[greet]]
