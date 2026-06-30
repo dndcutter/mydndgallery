@@ -3,7 +3,7 @@ tags:
   - dnd
   - icewind_dale
 создал заметку: 2024-12-23 23:34
-изменено: 2026-06-15T03:38:53+08:00
+изменено: 2026-06-30T19:37:33+08:00
 title: Icewind Dale Homepage
 ---
 
@@ -20,3 +20,5 @@ title: Icewind Dale Homepage
   </p>
 
 </div>
+
+[[greet]]
